@@ -1,0 +1,9 @@
+{
+  "name": "wa-automation",
+  "description": "Whatsapp automation weekend project",
+  "repository": "https://github.com/GajAhmadaaa/aqua-wa-automate",
+  "keywords": [],
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git" }
+  ]
