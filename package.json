@@ -13,8 +13,9 @@
     "@open-wa/wa-automate": "^3.6.5",
     "@open-wa/wa-decrypt": "^2.0.1",
     "multer": "^1.4.2",
-    "nodemon": "^2.0.6"
-    "request": "^2.88.2"
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2",
+    "p-queue": "^6.6.2"
   },
   "nodemonConfig": {
     "ignore": [
