@@ -5,6 +5,7 @@ const wa = require('@open-wa/wa-automate');
 const { create, decryptMedia, ev } = wa;
 const request = require('request');
 const fs = require('fs');
+const express = require("express");
 const jikan="https://api.jikan.moe/v3/";
 //const jikan="http://192.168.0.108:8000/v3/";
 /*const launchConfig = {
