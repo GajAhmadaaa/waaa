@@ -3,6 +3,7 @@
 const feature = require('./features.js');
 const wa = require('@open-wa/wa-automate');
 const { create, decryptMedia, ev } = wa;
+const { default: PQueue } = require("p-queue");
 const request = require('request');
 const fs = require('fs');
 const express = require("express");
@@ -30,7 +31,7 @@ wa.create(launchConfig).then(client => start(client));
  * @param {import("@open-wa/wa-automate").Client} client
  */
 async function start(client) {
-  queue.start();
+  PQueue.start();
   const unreadMessages = await client.getAllUnreadMessages();
   unreadMessages.forEach(processMessage);
   client.onMessage(processMessage);
@@ -58,6 +59,7 @@ process.on("exit", () => {
   if (fs.existsSync("./session.data.json")) {
     fs.unlinkSync("./session.data.json");
   }
+    
 function start(client) {
     client.onMessage(message => {
        // if(message.isGroupMsg ){
